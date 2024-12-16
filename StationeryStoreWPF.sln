@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationeryStoreWPF", "StationeryStoreWPF\StationeryStoreWPF.csproj", "{4EA8EE8F-6908-49A6-8325-BC81314979E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EA8EE8F-6908-49A6-8325-BC81314979E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA8EE8F-6908-49A6-8325-BC81314979E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA8EE8F-6908-49A6-8325-BC81314979E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA8EE8F-6908-49A6-8325-BC81314979E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0C8E4FA-14FE-442F-8353-512BEE1F9670}
+	EndGlobalSection
+EndGlobal

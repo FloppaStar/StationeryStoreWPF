@@ -1,0 +1,41 @@
+﻿<Page x:Class="StationeryStoreWPF.View.Pages.UserPages.UserAddEditCardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StationeryStoreWPF.View.Pages.UserPages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserAddEditCardPage">
+
+    <Grid Background="WhiteSmoke">
+        <Label Name="LAddEdit" Content="Добавление карты" FontSize="20" FontWeight="Bold" Margin="0 25 0 20" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 300 0">
+            <TextBox Background="White" Width="250" Name="TBoxCardNumber" FontSize="16" materialDesign:HintAssist.Hint="Номер карты" MaxLength="16" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 20" Text="{Binding CardNumber}" KeyDown="TBoxCardNumber_KeyDown"/>
+            <TextBox Background="White" Width="250" Name="TBoxIssueDate" FontSize="16" materialDesign:HintAssist.Hint="Действительна до" MaxLength="5" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 20" Text="{Binding IssueDate}" KeyDown="TBoxIssueDate_KeyDown"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="300 0 0 0">
+            <TextBox Background="White" Width="250" Name="TBoxCVV" FontSize="16" materialDesign:HintAssist.Hint="CVV" MaxLength="3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 20" Text="{Binding CVV}" KeyDown="TBoxCVV_KeyDown"/>
+            <ComboBox Background="White" Width="250" Name="CBoxBank" FontSize="16" materialDesign:HintAssist.Hint="Банк" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="0 0 0 20" ItemsSource="{Binding BanksList}" DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding IDBank, Mode=TwoWay}" KeyDown="CBoxBank_KeyDown"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 20">
+            <Button Content="Отмена" Padding="35 5" FontSize="16" Margin="0 0 10 0" Name="BCancel" Click="BCancel_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF6932AC" Offset="0"/>
+                        <GradientStop Offset="1" Color="#FF2E3DA0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Добавить" Padding="35 5" FontSize="16" Name="BAddEdit" Click="BAddEdit_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF6932AC" Offset="0"/>
+                        <GradientStop Offset="1" Color="#FF2E3DA0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
